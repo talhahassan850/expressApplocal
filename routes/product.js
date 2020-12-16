@@ -3,9 +3,9 @@ var router = express.Router();
 const ProductModel=require("../models/schema");
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  let product=await ProductModel.find();//products
-  //console.log(products); 
-  res.render('product/list',{title:"Products Table"});  
+  let product=await ProductModel.find();
+  console.log(product); 
+  res.render('product/list',{title:"Products Table",product});  
    
 });
 
