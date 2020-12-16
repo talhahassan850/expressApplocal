@@ -4,7 +4,7 @@ const ProductModel=require("../models/schema");
 /* GET home page. */
 router.get('/', async function(req, res, next) {
   let product=await ProductModel.find();
-  console.log(product); 
+ // console.log(product); 
   res.render('product/list',{title:"Products Table",product});  
    
 });
