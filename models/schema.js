@@ -8,6 +8,6 @@ const productSchema =
       price:Number,
       stuff:String
 }); 
-const ProductModel = mongoose.model("P2",productSchema);//model name 
+const ProductModel = mongoose.model("Product",productSchema);//model name 
 //then, schema name
 module.exports = ProductModel; 
