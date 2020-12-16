@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose =require("mongoose");
+const connectDB = require('./DB/Connection');
+connectDB();
 
 
 var indexRouter = require('./routes/index');
@@ -42,7 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-mongoose.connect("mongodb://localhost/crud", {
+/*mongoose.connect("mongodb://localhost/crud", {
     useNewUrlParser: true,
     useUnifiedTopology: true,  
   })
@@ -52,6 +54,6 @@ mongoose.connect("mongodb://localhost/crud", {
   .catch((err) => {
     console.log("Error Connecting");
     console.log(err);
-  });
+  });*/
 module.exports = app;
 
