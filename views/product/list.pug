@@ -14,12 +14,12 @@ block content
                 th stuff
                 th action
         tbody
-             each productModel in product
+             each item in product
                 tr
-                    td=productModel.code
-                    td=productModel.size
-                    td=productModel.price
-                    td=productModel.stuff
+                    td=item.code
+                    td=item.size
+                    td=item.price
+                    td=item.stuff
                     td
-                        a(href="/product/delete/"+productModel._id, class="btn btn-danger") Delete
-                        a(href="/product/edit/"+productModel._id, class="btn btn-warning") Edit
+                        a(href="/product/delete/"+item._id, class="btn btn-danger") Delete
+                        a(href="/product/edit/"+item._id, class="btn btn-warning") Edit

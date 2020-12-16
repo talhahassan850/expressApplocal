@@ -2,13 +2,12 @@ var express = require('express');
 var router = express.Router();
 const ProductModel=require("../models/schema");
 /* GET home page. */
-router.get('/', async function(req, res, next) {
-  let product=await ProductModel.find();
- // console.log(product); 
-  res.render('product/list',{title:"Products Table",product});  
-   
-});
 
+router.get("/", async (req, res) => {
+  var product = await ProductModel.find();
+  console.log("this");
+  res.render('product/list',{title:"Products Table",product});
+});
 
 router.get("/add", async function (req, res, next) {
   res.render('product/add');
