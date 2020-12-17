@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose =require("mongoose");
-//const connectDB = require('./DB/Connection');
-//connectDB();
 
 
 var indexRouter = require('./routes/index');
@@ -46,7 +44,7 @@ app.use(function(err, req, res, next) {
 
 mongoose
   .connect(
-    "mongodb+srv://talhahassan:talhahassan@cluster0.zzvak.mongodb.net/s2?retryWrites=true&w=majority",
+    "mongodb://talhahassan:talhahassan@cluster0-shard-00-00.gweu2.mongodb.net:27017,cluster0-shard-00-01.gweu2.mongodb.net:27017,cluster0-shard-00-02.gweu2.mongodb.net:27017/A1?ssl=true&replicaSet=atlas-t8bqss-shard-0&authSource=admin&retryWrites=true&w=majority",
     { useUnifiedTopology: true, useNewUrlParser: true
     ,useFindAndModify: false, useCreateIndex: true, useCreateIndex: true }
   )
