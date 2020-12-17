@@ -47,7 +47,8 @@ app.use(function(err, req, res, next) {
 mongoose
   .connect(
     "mongodb+srv://talhahassan:talhahassan@cluster0.zzvak.mongodb.net/s2?retryWrites=true&w=majority",
-    { useUnifiedTopology: true, useNewUrlParser: true }
+    { useUnifiedTopology: true, useNewUrlParser: true
+    ,useFindAndModify: false, useCreateIndex: true, useCreateIndex: true }
   )
   .then(() => {
     console.log("database connected");
